@@ -52,35 +52,37 @@ print("Результат деления \(numberOne) на \(numberTwo) раве
 
  3.6 Выведите на консоль сообщение о том в каком квартале вы родились. Чтобы сравнить номер месяца вашего рождения с одним из четырех кварталов, используйте операторы сравнения. Например если номер месяца больше 0 и меньше или равно 3, то это будет первый квартал. Для получения результата используйте условный оператор if
  */
-let dayOfBirth = 11, monthOfBirth = 3, yearOfBirth = 2001
-let thisDay = 7, thisMonth = 12, thisYear = 2021
-let daysPassedInFirstYear = (13 - monthOfBirth) * 30 - dayOfBirth
-let daysPassedInThisYear = (thisMonth - 1) * 30 + thisDay
-let daysPassed = daysPassedInFirstYear + daysPassedInThisYear + (thisYear - yearOfBirth - 1) * 360
-let secondsPassed = daysPassed * 24 * 60 * 60
-let monthsPassed = daysPassed / 30
-let yearsPassed = daysPassed / 360
+let dayOfBirth = 11
+let monthOfBirth = 3
+let yearOfBirth = 2001
+
+let thisDay = 7
+let thisMonth = 12
+let thisYear = 2021
+
+let daysInMonth = 30
+let daysInYear = 360
+let secondsInDay = 24 * 60 * 60
+
+let daysPassedInFirstYear = (13 - monthOfBirth) * daysInMonth - dayOfBirth
+let daysPassedInThisYear = (thisMonth - 1) * daysInMonth + thisDay
+let daysPassed = daysPassedInFirstYear + daysPassedInThisYear + (thisYear - yearOfBirth - 1) * daysInYear
+let secondsPassed = daysPassed * secondsInDay
+let monthsPassed = daysPassed / daysInMonth
+let yearsPassed = daysPassed / daysInYear
 
 print("\(yearsPassed) years, \(monthsPassed) months, \(daysPassed) days and \(secondsPassed) seconds have passed since my birth")
 
-if monthOfBirth > 0 && monthOfBirth <= 3 {
-    print("I was born in the first quarter of the year")
-}
-
-if monthOfBirth > 3 && monthOfBirth <= 6 {
-    print("I was born in the second quarter of the year")
-}
-
-if monthOfBirth > 6 && monthOfBirth <= 9 {
-    print("I was born in the third quarter of the year")
-}
-
-if monthOfBirth > 9 && monthOfBirth <= 12 {
-    print("I was born in the fourth quarter of the year")
-}
-
 if monthOfBirth < 1 || monthOfBirth > 12 {
     print("Error!  Wrong month of birth")
+} else if monthOfBirth <= 3 {
+    print("I was born in the first quarter of the year")
+} else if monthOfBirth <= 6 {
+    print("I was born in the second quarter of the year")
+} else if monthOfBirth <= 9 {
+    print("I was born in the third quarter of the year")
+} else if monthOfBirth <= 12 {
+    print("I was born in the fourth quarter of the year")
 }
 
 /*:
