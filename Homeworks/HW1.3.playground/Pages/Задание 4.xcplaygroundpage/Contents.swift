@@ -15,9 +15,8 @@ case "red" where candyFilling == "chocolate":
     print("This candy should be put in the first heap.")
 case "yellow" where candyFilling == "nuts":
     print("This candy should be put in the second heap.")
-case "green" where candyFilling == "chocolate":
-    fallthrough
-case "brown" where candyFilling == "chocolate":
+case "green" where candyFilling == "chocolate",
+     "brown" where candyFilling == "chocolate":
     print("This candy should be put in the third heap.")
 default:
     print("I don't know where to put such a candy!")
