@@ -50,14 +50,14 @@ Output now is "Optional(34)". I need to unwrap my optional property.\n
 /*:
  Используйте привязку опционалов для извлечения `userAge`.  Если `userAge` содержит значение, то выведите его в консоль.
  */
-// let userInputAge = "34"
-// let userAge: Int? = Int(userInputAge)
-//
-// if let userAge = userAge {
-//    print(userAge)
-// }
-//
-// print("Now it's okay!")
+let userInputAge = "34"
+let userAge: Int? = Int(userInputAge)
+
+if let userAge = userAge {
+    print(userAge)
+}
+
+print("Now it's okay!")
 /*:
  Теперь снова эмулируйте опечатку и попробуйте вывести на консоль целочисленное значение переменной `userInputAge` при помощи оператора "!". Какую ошибку вы получаете? Почему?
  */
