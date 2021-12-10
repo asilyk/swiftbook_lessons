@@ -12,7 +12,7 @@ let period = 5
 let rate = 0.11
 var profit = 0.0
 
-for _ in 1 ... period {
+for _ in 1...period {
     let accrual = deposit * rate
 
     profit += accrual
@@ -24,28 +24,9 @@ print(String(format: "Сумма вклада через \(period) лет уве
  ## Задание 2
  2.1 Создайте целочисленный массив данных с любым набором чисел.
  */
-let integers = [
-    0,
-    1,
-    1,
-    2,
-    3,
-    5,
-    8,
-    13,
-    21,
-    34,
-    55,
-    89,
-    144,
-    233,
-    377,
-    610,
-]
+let integers = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
 //: 2.2 Выведите на консоль все четные числа из массива
-print("""
-\nAll even elements in the array "integers":
-""")
+print("\nAll even elements in the array \"integers\":")
 
 for integer in integers {
     if integer.isMultiple(of: 2) {
@@ -63,9 +44,7 @@ for integer in integers {
 
  Используя оператор `Continue` выведите на консоль все нечетные числа из массива. Для этого нужно выполнить проверку на четность числа, и если оно оказалось четным перейти к следующей итерации.
  */
-print("""
-\nAll odd elements in the array "integers":
-""")
+print("\nAll odd elements in the array \"integers\":")
 
 for integer in integers {
     if integer.isMultiple(of: 2) {
@@ -100,8 +79,8 @@ for integer in integers {
 
   Для определения случайного числа используйте функцию random: `Int.random(1...10)`
  */
-for counter in 1 ... 10 {
-    let randomNumber = Int.random(in: 1 ... 10)
+for counter in 1...10 {
+    let randomNumber = Int.random(in: 1...10)
 
     if randomNumber == 5 {
         print("\nЧтобы выпало число 5, понадобилось \(counter) итераций")
@@ -111,7 +90,7 @@ for counter in 1 ... 10 {
 
 //var numberWasRolled = false
 //
-//for counter in 1 ... 10 {
+//for counter in 1...10 {
 //    let randomNumber = Int.random(in: 1 ... 10)
 //
 //    if randomNumber == 5 {
