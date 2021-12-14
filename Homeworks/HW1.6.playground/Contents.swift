@@ -182,12 +182,14 @@ let surnames = ["Smith", "Dow", "Isaacson", "Pennyworth", "Jankins"]
 var employees: [Employee] = []
 
 for _ in 0..<10 {
-    let name = names.randomElement() ?? ""
-    let surname = surnames.randomElement() ?? ""
+    let name = names.randomElement()
+    let surname = surnames.randomElement()
     let salary = Int.random(in: 1000...2000)
 
-    let employee = Employee(salary: salary, name: name, surname: surname)
-    employees.append(employee)
+    if name != nil, surname != nil {
+        let employee = Employee(salary: salary, name: name!, surname: surname!)
+        employees.append(employee)
+    }
 }
 
 //: 3.4 Переберите массив `employees` и выведите информацию по каждому сотруднику в виде: «<имя> <фамилия>’s salary is $<... >»
